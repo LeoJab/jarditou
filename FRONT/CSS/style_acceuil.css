@@ -16,7 +16,7 @@ header {
 }
 
 nav {
-    background-color: black;
+    background-color: #333;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -85,7 +85,7 @@ aside {
 }
 
 footer {
-    background-color: black;
+    background-color: #333;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
