@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/ASSET/CSS/style_contact.css">
+    <title>Contact</title>
+</head>
+
+
+<body>
+
+    <header>
+        <img id="logo" src="/ASSET/image/jarditou_html_zip/images/jarditou_logo.jpg" title="logo_jarditou" alt="logo jarditou">
+        <h1 id="titre">La qualité depuis 70 ans</h1>
+    </header>
+
+
+    <nav>
+        <ul id="menu">
+            <li> <a class="navigation" href="index.html">Acceuil</a> </li>
+            <li> <a class="navigation" href="tableau.html">Tableau</a> </li>
+            <li> <a class="navigation" href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
+
+
+    <section>
+        <img id="pub" src="/ASSET/image/jarditou_html_zip/images/promotion.jpg" title="pub" alt="pub">
+    </section>
+
+
+    <aside>
+        <p>[COLONE DE DROITE]</p>
+    </aside>
+
+
+    <section>
+        <article>
+            <fieldset id="formulaire">
+                <form action="http://bienvu.net/script.php" method="post">
+                    <p>* Ces zones sont obligatoires</p>
+                    <fieldset class="coordonnees">
+                      <legend class="coordonnees">Vos Coordonnées</legend>
+                            <label for="nom">Votre nom* :</label> <input type="text" name="nom" id="nom" required><br>
+                            <label for="prenom">Votre pénom* :</label> <input type="text" name="prenom" id="prenom" required><br>
+                            <label>Sexe* :
+                            <input type="radio" name="sexe" value="Féminin" required> Féminin
+                            <input type="radio" name="sexe" value="Masculin" required> Masculin
+                            </label>
+                            <br><label for="date">Date de naissance* :</label> <input type="date" name="ddn" id="date" required><br>
+                            <label for="cp">Code postal* :</label> <input type="text" name="cp" id="cp" required><br>
+                            <label for="adresse">Adresse :</label> <input type="text" name="adresse" id="adresse"><br>
+                            <label for="ville">Ville :</label> <input type="text" name="ville" id="ville"><br>
+                            <label for="email">Email* :</label> <input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" required><br>
+                    </fieldset>
+                    <br>
+                    <fieldset class="demande">
+                        <legend class="demande">Votre demande</legend>
+                        <label for="choix">Sujet* :</label>
+                        <select id="choix">
+                            <option value="Veuillez_séléctionner_un_sujet" hidden selected>Veuillez séléctionner un sujet</option>
+                            <option value="Mes_commandes">Mes commandes</option>
+                            <option value="Question_sur_un_produit">Question sur un produit</option>
+                            <option value="Réclamation">Réclamation</option>
+                            <option value="Autres">Autres</option>
+                        </select>
+                        <br><label for="question">Vos question* :</label><textarea name="question" id="question" cols="25" rows="1" required></textarea>
+                    </fieldset>
+                    <br><label for="confirmation_formulaire"><input type="checkbox" name="confirmation_formulaire" id="confirmation_formulaire" required>* J'accepte le traitement informatique de ce formulaire</label>
+                    <br>
+                    <br><button type="submit">Envoyer</button>
+                    <button type="reset">Annuler</button>
+                </form>    
+            </fieldset>
+        </article>
+    </section>
+
+
+    <footer>
+        <ul id="menu_bas">
+            <li> <a class="bas" href="mention_legales.html">Mention légales</a> </li>
+            <li> <a class="bas" href="horaire.html">Horaire</a> </li>
+            <li> <a class="bas" href="plan_du_site.html">Plan du site</a> </li>
+        </ul>
+    </footer>
+</body>
+</html>
