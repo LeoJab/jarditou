@@ -21,3 +21,23 @@ function enregistrer()
     var reponse3 = window.confirm("Etes-vous un homme ?")
     window.alert("Bonjour Monieur" + " " + reponse1 + " " + reponse2 + " " + "Bienvenue sur notre site web !")
 }
+
+function verification()
+{
+    var u = document.getElementById("textBox2").value;
+    if(u%2 == 0) {
+        document.getElementById("reponse").innerHTML="Nombre pair";
+    } else {
+        document.getElementById("reponse").innerHTML="Nombre impair";
+    }
+}
+
+function CalculAge()
+{
+    var today = new Date();
+    var ddn = document.getElementById("ddn").value;
+    var an=ddn.substr(6,4);
+    var mois=ddn.substr(3,2);
+    var jour=ddn.substr(0,2);
+    
+}
