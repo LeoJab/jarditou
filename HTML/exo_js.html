@@ -2,7 +2,6 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <script src="/ASSET/JS/exercice1.js"></script>
     <title>Nombre magique</title>
   </head>
   <body>
@@ -21,15 +20,48 @@
     <hr>
 
     <div id="label2">Entrez le nombre d'utilisateur</div>
-      <input type="text" id="textBox2" value="">
-      <input type="button" id="button2" value="Valider" onclick="verification()">
-      <p id="reponse"> </p>
+    <input type="text" id="textBox2" value="">
+    <input type="button" id="button2" value="Valider" onclick="verification()">
+    <p id="reponse"> </p>
 
-      <br>
-      <hr>
+    <br>
+    <hr>
 
-      <div id="label3">Entrez votre date de naissance</div>
-      <input type="text" id="ddn">
-      <input type="button" id="button3" value="Valider" onclick="CalculAge()">
+    <div>
+    <label id="label3">Entrez votre date de naissance</label>
+    <input type="text" id="ddn">
+    <input type="button" id="button3" value="Calcul" onclick="CalculAge()">
+    <div id="age"></div>
+    </div>
+
+    <br>
+    <hr>
+
+    <div>
+    <label id="label4">Entrez deux nombres entiers:</label>
+    <input type="number" id="nombre1"> <input type="number" id="nombre2">
+    <input type="button" name="plus" id="plus" value="+" onclick="CalculPlus()">
+    <input type="button" name="moins" id="moins" value="-" onclick="CalculMoins()">
+    <input type="button" name="multiplier" id="multi" value="x" onclick="CalculMulti()">
+    <input type="button" name="diviser" id="divi" value="/" onclick="CalculDivi()">
+    <label>Résultat: </label><input type="text" name="resultat" id="resultat">
+    </div>
+
+    <br>
+    <hr>
+
+    <div id="calculatrice">
+    <label id="label4">Entrez deux nombres entiers:</label>
+    <input type="number" id="nombre3"> <input type="number" id="nombre4">
+    <input type="button" name="plus" class="operateur" value="+">
+    <input type="button" name="moins" class="operateur" value="-">
+    <input type="button" name="multiplier" class="operateur" value="*">
+    <input type="button" name="diviser" class="operateur" value="/">
+    <input type="button" name="calcul" id="calcul" value="Calcul" onclick="calcul()">
+    <label id="label5">Résultat:</label><input type="text" id="resultat2">
+    </div>
+
+
+    <script src="/ASSET/JS/exercice1.js"></script>
   </body>
 </html>
