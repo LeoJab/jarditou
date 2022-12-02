@@ -103,27 +103,29 @@ function CalculDivi()
 
 function calcul()
 {
-  var operateur = document.getElementsByClassName("operateur");
-  var n1 = document.getElementById("nombre3").value;
-  var n2 = document.getElementById("nombre4").value;
-  var resultat;
+  var n1 = parseInt(document.getElementById("n1").value);
+  var n2 = parseInt(document.getElementById("n2").value);
+  var op = document.getElementById("op");
+  var value_op = op.value;
+  var resu = 0;
 
-  switch(n1, n2, operateur){
-    case '+':
-      var resultat = parseInt(n1) + parseInt(n2);
-      document.getElementById("resultat2").value = resultat;
+
+  switch(value_op){
+    case ("+"):
+      resu = n1 + n2;
+      document.getElementById("resu").value = resu;
       break;
-    case '-':
-      var resultat = parseInt(n1) - parseInt(n2);
-      document.getElementById("resultat2").value = resultat;
+    case ("-"):
+      resu = n1 - n2;
+      document.getElementById("resu").value = resu;
       break;
-    case '*':
-      var resultat = parseInt(n1) * parseInt(n2);
-      document.getElementById("resultat2").value = resultat;
+    case ("*"):
+      resu = n1 * n2;
+      document.getElementById("resu").value = resu;
       break;
-    case '/':
-      var resultat = parseInt(n1) / parseInt(n2);
-      document.getElementById("resultat2").value = resultat;
+    case ("/"):
+      resu = n1 / n2;
+      document.getElementById("resu").value = resu;
       break;
   }
 }

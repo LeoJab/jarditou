@@ -52,13 +52,20 @@
 
     <div id="calculatrice">
     <label id="label4">Entrez deux nombres entiers:</label>
-    <input type="number" id="nombre3"> <input type="number" id="nombre4">
-    <input type="button" name="plus" class="operateur" value="+">
-    <input type="button" name="moins" class="operateur" value="-">
-    <input type="button" name="multiplier" class="operateur" value="*">
-    <input type="button" name="diviser" class="operateur" value="/">
+    
+    <input type="number" id="n1"> 
+    <input type="number" id="n2">
+    
+    <select name="op" id="op">
+      <option value="+" selected>+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
     <input type="button" name="calcul" id="calcul" value="Calcul" onclick="calcul()">
-    <label id="label5">Résultat:</label><input type="text" id="resultat2">
+    
+    <label id="label5">Résultat:</label><input type="text" id="resu">
     </div>
 
 
