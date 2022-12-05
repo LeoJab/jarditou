@@ -130,3 +130,30 @@ function calcul()
   }
 }
 
+//---------------------------------------------------------
+
+var p = [];
+var i = 1;
+var saisi = true;
+
+function saisir()
+{
+
+  while(saisi == true) 
+  {
+    p[i] = window.prompt("Saisissez le prénom n°"+i);
+
+    p[i].pop();
+    for(;i > p[i].length;)
+    {
+    document.getElementById("prm").innerHTML += i + " " + p[i] + "<br>";
+
+    if (p[i] == "")
+    {
+      saisi = false;
+    }
+
+    i++;
+    }
+  }
+}
