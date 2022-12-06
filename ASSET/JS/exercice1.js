@@ -130,30 +130,88 @@ function calcul()
   }
 }
 
-//---------------------------------------------------------
+//------------------------- JS-08 EX-1 --------------------------------
 
 var p = [];
-var i = 1;
 var saisi = true;
 
 function saisir()
 {
 
+  var i = 1;
+
   while(saisi == true) 
   {
     p[i] = window.prompt("Saisissez le prénom n°"+i);
 
-    p[i].pop();
-    for(;i > p[i].length;)
-    {
-    document.getElementById("prm").innerHTML += i + " " + p[i] + "<br>";
-
     if (p[i] == "")
-    {
-      saisi = false;
-    }
+      {
+        saisi = false;
+      }
+      i++;
+  }
 
-    i++;
+  p.pop();
+
+  for(i = 1; i < p.length; i++)
+    {
+      //console.log(i, p[i]);
+      
+      document.getElementById("prm").innerHTML += i + " " + p[i] + "<br>";
     }
+}
+
+//------------------------- JS-08 EX-2 --------------------------------
+
+function js1_08_2()
+{
+  var n = document.getElementById("n_08_2").value;
+  var s = true
+  
+  document.getElementById("r2_08_2").innerHTML = "";
+  document.getElementById("r1_08_2").innerText = "Liste des nombres entiers précédent" + " " + n + ":";
+
+  while(s == true)
+  {
+    n = n - 1;
+    //console.log(n);
+    document.getElementById("r2_08_2").innerHTML += n + ", ";
+
+    if(n == 0)
+    {
+      s = false;
+      break;
+    }
+  }
+}
+
+//------------------------- JS-08 EX-2 --------------------------------
+
+var saisi = true;
+
+function js1_08_3()
+{
+  var t = [];
+  var i = 0;
+
+  while(saisi == true) 
+  {
+    t[i] = window.prompt("Entrez des nombres entiers (Tapez 0 pour fermer)");
+
+    //console.log(t);
+    if (t[i] == 0)
+      {
+        saisi = false;
+      }
+    i++
+  }
+
+  t.pop();
+
+  for(i = 0; i < t.length; i++)
+  { 
+    console.log(t);
+    var total = t.reduce();
+    console.log(total);
   }
 }
