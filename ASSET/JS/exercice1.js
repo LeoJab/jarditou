@@ -133,20 +133,19 @@ function calcul()
 //------------------------- JS-08 EX-1 --------------------------------
 
 var p = [];
-var saisi = true;
+var saisi1 = true;
 
 function saisir()
 {
-
   var i = 1;
 
-  while(saisi == true) 
+  while(saisi1 == true) 
   {
     p[i] = window.prompt("Saisissez le prénom n°"+i);
 
     if (p[i] == "")
       {
-        saisi = false;
+        saisi1 = false;
       }
       i++;
   }
@@ -185,33 +184,66 @@ function js1_08_2()
   }
 }
 
-//------------------------- JS-08 EX-2 --------------------------------
+//------------------------- JS-08 EX-3 --------------------------------
 
-var saisi = true;
+var saisi2 = true;
+const t = [];
 
 function js1_08_3()
 {
-  var t = [];
+  t[i] = 0;
   var i = 0;
 
-  while(saisi == true) 
+  while(saisi2 == true) 
   {
-    t[i] = window.prompt("Entrez des nombres entiers (Tapez 0 pour fermer)");
+    t[i] = parseInt(window.prompt("Entrez des nombres entiers (Tapez 0 pour fermer)"));
+
 
     //console.log(t);
     if (t[i] == 0)
       {
-        saisi = false;
+        saisi2 = false;
       }
     i++
   }
 
   t.pop();
 
+  const somme = t.reduce((acc, el) => acc + el);
+  document.getElementById("r1_08_3").innerHTML = "La somme total est de:" + " " + somme;
+
+  var sum = 0;
   for(i = 0; i < t.length; i++)
-  { 
-    console.log(t);
-    var total = t.reduce();
-    console.log(total);
+  {
+    sum += t[i];
+  }
+
+  var moyenne = sum / t.length;
+  document.getElementById("r2_08_3").innerHTML = "La moyenne est de:" + " " + moyenne;
+}
+
+//------------------------- JS-08 EX-4 --------------------------------
+
+function js1_08_4()
+{
+
+const n1_08_4 = parseInt(document.getElementById("n1_08_4").value);
+const n2_08_4 = parseInt(document.getElementById("n2_08_4").value);
+var resultat_08_4 = 0;
+var i_08_4 = 1;
+
+document.getElementById("r1_08_4").innerHTML = " ";
+
+  while(i_08_4 <= n1_08_4)
+  {
+    resultat_08_4 = i_08_4 * n2_08_4;
+
+    document.getElementById("r1_08_4").innerHTML += i_08_4 + " * " + n2_08_4 + " = " + resultat_08_4 + "<br>";
+    console.log(resultat_08_4);
+    
+    i_08_4++;
   }
 }
+
+//------------------------- JS-08 EX-5 --------------------------------
+
