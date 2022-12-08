@@ -247,3 +247,55 @@ document.getElementById("r1_08_4").innerHTML = " ";
 
 //------------------------- JS-08 EX-5 --------------------------------
 
+function js1_08_5()
+{
+  var mot = document.getElementById("r1_08_5").value;
+  var nbvoyelles = 0;
+
+  for(i = 0; i < mot.length; i++)
+  {
+    if ((mot === "a") || (mot === "e") || (mot === "i") || (mot === "o") || (mot === "u") || (mot === "y"));{
+      nbvoyelles++;
+    }
+  }
+  document.getElementById("r2_08_5").innerHTML = "Le nombre de voyelle(s) dans " + mot + " " + "est de" + " " + nbvoyelles;
+  return nbvoyelles;
+}
+
+//------------------------- JS-09 EX-1 --------------------------------
+
+
+
+function js1_09_1()
+{
+  var x_09_1 = parseInt(window.prompt("Entrez un nombre"));
+  var y_09_1 = parseInt(window.prompt("Entrez un multiplicateur"));
+
+  var c = Math.pow(x_09_1, 3);
+  var m = x_09_1 * y_09_1;
+  
+  document.getElementById("r2_09_1").innerHTML = "Le cube de " + x_09_1 + " est égal à " + c + "<br>" + "Le produit de " + x_09_1 + " x " + y_09_1 + " est égal à " + m;
+
+  var img_09_1 = document.createElement("img");
+  img_09_1.src = "/ASSET/image/papillon.jpg";
+  var pimg_09_1 = document.getElementById("r1_09_1");
+  document.getElementById("r1_09_1").innerHTML = "";
+  pimg_09_1.appendChild(img_09_1);
+}
+
+//------------------------- JS-09 EX-2 --------------------------------
+
+function js1_09_2()
+{
+  var str1 = document.getElementById("t1_09_2").value;
+  var str2 = ";";
+  var n = 3;
+  var tab = str1.split(" ");
+
+  for(i = 0; i < tab.length; i++)
+  {
+    document.write("" + tab[i] + "");
+    console.log(tab[i]);
+  }
+
+}
