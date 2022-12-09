@@ -239,7 +239,7 @@ document.getElementById("r1_08_4").innerHTML = " ";
     resultat_08_4 = i_08_4 * n2_08_4;
 
     document.getElementById("r1_08_4").innerHTML += i_08_4 + " * " + n2_08_4 + " = " + resultat_08_4 + "<br>";
-    console.log(resultat_08_4);
+    //console.log(resultat_08_4);
     
     i_08_4++;
   }
@@ -254,7 +254,7 @@ function js1_08_5()
 
   for(i = 0; i < mot.length; i++)
   {
-    if ((mot === "a") || (mot === "e") || (mot === "i") || (mot === "o") || (mot === "u") || (mot === "y"));{
+    if ((mot == "a") || (mot == "e") || (mot == "i") || (mot == "o") || (mot == "u") || (mot == "y"));{
       nbvoyelles++;
     }
   }
@@ -283,19 +283,33 @@ function js1_09_1()
   pimg_09_1.appendChild(img_09_1);
 }
 
-//------------------------- JS-09 EX-2 --------------------------------
+//------------------------- JS-10 EX-1 --------------------------------
 
-function js1_09_2()
+var tab_10_1 = [];
+var s_10_1 = true;
+
+function js1_10_1()
 {
-  var str1 = document.getElementById("t1_09_2").value;
-  var str2 = ";";
-  var n = 3;
-  var tab = str1.split(" ");
+  var t1_10_1 = parseInt(document.getElementById("t1_10_1").value);
+  console.log(t1_10_1);
 
-  for(i = 0; i < tab.length; i++)
+  /*while(tab_10_1.length < t1_10_1)
+    {
+      var i = 1;
+
+      tab_10_1[i] = window.prompt("Entrez une valeur");
+
+      console.log(tab_10_1[i]);
+    
+      i++;
+    }*/
+  console.log(tab_10_1);
+  var i = 1;
+
+  for(n = -0; n < tab_10_1.length; n++)
   {
-    document.write("" + tab[i] + "");
-    console.log(tab[i]);
+      
+    tab_10_1[i] = window.prompt("Entrez une valeur");
+    console.log(tab_10_1[i]);
   }
-
 }
