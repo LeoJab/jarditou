@@ -64,7 +64,7 @@ function js_2_1()
 
     document.getElementById("resultat").innerHTML = "";
 
-    for(i = 1; i <= 10; i++)
+    for(i = 0; i <= 10; i++)
     {
         t_1_2 = n_1_2 * m_1_2;
 
