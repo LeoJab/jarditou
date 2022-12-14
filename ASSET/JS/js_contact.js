@@ -84,19 +84,18 @@ function js_submit_contact()
     }
 
     //--------------- EMAIL ---------------
-    document.getElementById("email").value = "";
+    document.getElementById("email").innerHTML = "";
     var email = document.getElementById("email").value;
     let verif_email = filtre_email.test(email);
+    console.log(email, verif_email)
 
-    if(email === ""){
+    if(email == ""){
         document.getElementById("er_email").innerHTML = error_vide;
     }
     if(verif_email == false){
         document.getElementById("email").value = "";
         document.getElementById("er_email").innerHTML = "Votre adresse email n'est pas correct";
     }
-
-    console.log(email, verif_email)
 
     //--------------- SUJET ---------------
     document.getElementById("er_sujet").innerHTML = "";
@@ -124,6 +123,4 @@ function js_submit_contact()
     }else if(confirm == null) {
         document.getElementById("er_confirm").innerHTML = error_vide;
     }
-
-
 }

@@ -62,13 +62,13 @@ function js_2_1()
     var m_1_2 = 1;
     var t_1_2 = 0;
 
-    document.getElementById("resultat").innerHTML = "";
+    document.getElementById("resultat_1_2").innerHTML = "";
 
-    for(i = 0; i <= 10; i++)
+    for(i = 0; i < 10; i++)
     {
         t_1_2 = n_1_2 * m_1_2;
 
-        document.getElementById("resultat").innerHTML += m_1_2 + " * " + n_1_2 + " = " + t_1_2 + "<br>";
+        document.getElementById("resultat_1_2").innerHTML += m_1_2 + " * " + n_1_2 + " = " + t_1_2 + "<br>";
 
         m_1_2++;
     }
@@ -84,7 +84,7 @@ function js_3_1()
     var prm = document.getElementById("t_1_3").value;
     document.getElementById("error_1_3").innerHTML = "";
 
-    if (prm === "Audrey") {
+    /**if (prm === "Audrey") {
         tab.splice(0, 1, '" "');
     } else if (prm === "Aurélien") {
         tab.splice(1, 1, '" "');
@@ -106,6 +106,42 @@ function js_3_1()
         tab.splice(9, 1, '" "');
     } else {
         document.getElementById("error_1_3").innerHTML = "Le prenom n'est pas présent dans la liste";
+    }**/
+
+    switch(prm){
+        case("Audrey"):
+            tab.splice(0, 1, '" "');
+            break;
+        case("Aurélien"):
+            tab.splice(1, 1, '" "');
+            break;
+        case("Flavien"):
+            tab.splice(2, 1, '" "');
+            break;
+        case("Jérémy"):
+            tab.splice(3, 1, '" "');
+            break;
+        case("Laurent"):
+            tab.splice(4, 1, '" "');
+            break;
+        case("Melik"):
+            tab.splice(5, 1, '" "');
+            break;
+        case("Nouara"):
+            tab.splice(6, 1, '" "');
+            break;
+        case("Salem"):
+            tab.splice(7, 1, '" "');
+            break;
+        case("Samuel"):
+            tab.splice(8, 1, '" "');
+            break
+        case("Stéphane"):
+            tab.splice(9, 1, '" "');
+            break;
+        default:
+            document.getElementById("error_1_3").innerHTML = "Le prenom n'est pas présent dans la liste";
+            break;
     }
 
     document.getElementById("tb_prm").innerHTML = tab;
@@ -125,18 +161,17 @@ function js_4_1()
     if(tot > 200) {
         rem = (tot / 100) * 10;
         totr = tot - rem;
-        rem = (tot / 100) * 10  + "€(10%)";
+        rem = rem.toFixed(2) + "€(10%)";
     } else if(tot >= 100 || tot >= 200) {
         rem = (tot / 100) * 5;
         totr = tot - rem;
-        rem = (tot / 100) * 5 + "€(5%)";
+        rem = rem.toFixed(2) + "€(5%)";
     } else {
         totr = tot;
         rem = 0;
     }
-
-    console.log(rem);
-    console.log(totr);
+    //console.log(rem);
+    //console.log(totr);
 
     if(totr < 500) {
         port = ((totr / 100) * 2);
@@ -150,9 +185,7 @@ function js_4_1()
         port = 0;
     }
 
-    document.getElementById("resultat_1_4").innerHTML = "Prix total est de " + tot + "€ avec une remise de -" + rem + " et " + port + "€ de frais de port, le prix final est de " + totr + "€";
-
-
-    console.log(totr);
-    console.log(port);
+    document.getElementById("resultat_1_4").innerHTML = "Prix total est de " + tot.toFixed(2) + "€ avec une remise de -" + rem + " et " + port.toFixed(2) + "€ de frais de port, le prix final est de " + totr.toFixed(2) + "€";
+    //console.log(totr);
+    //console.log(port);
 }
