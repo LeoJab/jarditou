@@ -5,9 +5,11 @@ var saisi_1_1 = true;
 var age_20 = 0;
 var age_40 = 0;
 var age_20_40 = 0;
+var age_100 = 0;
 
 function js_1_1()
 {
+    document.getElementById("age").innerHTML = "";
     var i = 1;
 
     while(saisi_1_1 == true)
@@ -31,27 +33,26 @@ function js_1_1()
 
     for(i = 0; i < age_1_1.length; i++)
     {
-        if (age_1_1[i] == 0)
-        {
+        if (age_1_1[i] == 0) {
             age_1_1.pop;
-        } else if(age_1_1[i] < 20)
-        {
+        } else if(age_1_1[i] < 20) {
             age_20++;
-        } else if (age_1_1[i] > 40) 
-        {
+        } else if (age_1_1[i] > 40) {
             age_40++;
-        } else if (age_1_1[i] >= 20)
-        {
+        } else if (age_1_1[i] >= 20) {
             age_20_40++;
-        } else if (age_1_1[i] <= 40)
-        {
+        } else if (age_1_1[i] <= 40) {
             age_20_40++;
+        } else if (age_1_1[i] = 100) {
+            age_100++;
+            saisi_1_1 = false;
         }
     }
 
-    document.getElementById("moins_20").innerHTML += " " + age_20;
-    document.getElementById("plus_40").innerHTML += " " + age_40;
-    document.getElementById("entre_20_40").innerHTML += " " + age_20_40;
+    document.getElementById("moins_20").innerHTML += "Nombre de personne de moins de 20 ans:  " + age_20;
+    document.getElementById("plus_40").innerHTML += "Nombre de personne de plus de 40 ans:  " + age_40;
+    document.getElementById("entre_20_40").innerHTML += "Nombre de personne qui ont entre 20 ans et 40 ans:  " + age_20_40;
+    document.getElementById("100").innerHTML += "Personne centenaire:  " + age_100;
 }
 
 //------------ Exercice 2 ------------
@@ -185,7 +186,7 @@ function js_4_1()
         port = 0;
     }
 
-    document.getElementById("resultat_1_4").innerHTML = "Prix total est de " + tot.toFixed(2) + "€ avec une remise de -" + rem + " et " + port.toFixed(2) + "€ de frais de port, le prix final est de " + totr.toFixed(2) + "€";
+    document.getElementById("resultat_1_4").innerHTML = "Prix total est de " + tot.toFixed(2) + "€ avec une remise de " + rem + " et " + port.toFixed(2) + "€ de frais de port," + "<br>" + "le prix final est de " + totr.toFixed(2) + "€";
     //console.log(totr);
     //console.log(port);
 }
