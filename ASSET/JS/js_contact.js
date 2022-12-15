@@ -1,4 +1,4 @@
-const filtre_lettre = new RegExp(/^[A-Za-z]*$/);
+const filtre_lettre = new RegExp(/^[A-Za-zéàùôâêèëäöïî-]*$/);
 const filtre_chiffre = new RegExp(/^[0-9]*$/);
 const filtre_email = new RegExp(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/);
 

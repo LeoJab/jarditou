@@ -1,3 +1,5 @@
+const filtre_chiffre = new RegExp(/^[0-9]*$/);
+
 //------------ Exercice 1 ------------
 
 var age_1_1 = [];
@@ -64,6 +66,13 @@ function js_2_1()
     var t_1_2 = 0;
 
     document.getElementById("resultat_1_2").innerHTML = "";
+    document.getElementById("er_multi").innerHTML = "";
+    let verif_n_1_2 = filtre_chiffre.test(n_1_2);
+
+    if(verif_n_1_2 == false) {
+        document.getElementById("er_multi").innerHTML = "Entrez un chiffre ou un nombre.";
+        return;
+    }
 
     for(i = 0; i < 10; i++)
     {
@@ -82,7 +91,7 @@ document.getElementById("tb_prm").innerHTML = tab;
 
 function js_3_1()
 {
-    var prm = document.getElementById("t_1_3").value;
+    var prm = (document.getElementById("t_1_3").value).toLowerCase();
     document.getElementById("error_1_3").innerHTML = "";
 
     /**if (prm === "Audrey") {
@@ -110,34 +119,34 @@ function js_3_1()
     }**/
 
     switch(prm){
-        case("Audrey"):
+        case("audrey"):
             tab.splice(0, 1, '" "');
             break;
-        case("Aurélien"):
+        case("aurélien"):
             tab.splice(1, 1, '" "');
             break;
-        case("Flavien"):
+        case("flavien"):
             tab.splice(2, 1, '" "');
             break;
-        case("Jérémy"):
+        case("jérémy"):
             tab.splice(3, 1, '" "');
             break;
-        case("Laurent"):
+        case("laurent"):
             tab.splice(4, 1, '" "');
             break;
-        case("Melik"):
+        case("melik"):
             tab.splice(5, 1, '" "');
             break;
-        case("Nouara"):
+        case("nouara"):
             tab.splice(6, 1, '" "');
             break;
-        case("Salem"):
+        case("salem"):
             tab.splice(7, 1, '" "');
             break;
-        case("Samuel"):
+        case("samuel"):
             tab.splice(8, 1, '" "');
             break
-        case("Stéphane"):
+        case("stéphane"):
             tab.splice(9, 1, '" "');
             break;
         default:
@@ -159,7 +168,19 @@ function js_4_1()
     var tot = pu * qtecom;
     var totr = 0;
 
-    if(tot > 200) {
+    document.getElementById("resultat_1_4").innerHTML = "";
+    document.getElementById("er_prix").innerHTML = "";
+    document.getElementById("er_quantité").innerHTML = "";
+
+    if(pu == 0){
+        document.getElementById("er_prix").innerHTML = "Non valide.";
+        return;
+    } else if(qtecom == 0) {
+        document.getElementById("er_quantité").innerHTML = "Non valide.";
+        return;
+    }
+    
+        if(tot > 200) {
         rem = (tot / 100) * 10;
         totr = tot - rem;
         rem = rem.toFixed(2) + "€(10%)";
