@@ -313,3 +313,25 @@ function js1_10_1()
     console.log(tab_10_1[i]);
   }
 }
+
+//------------------------- JS-11 EX-1 --------------------------------
+
+var tab_11_1 = [];
+
+function js_11_1() {
+  var saisi_11_1 = true;
+
+  while(saisi_11_1 = true) {
+    
+    tab_11_1[i] = window.prompt("Entrez une valeurs numérique");
+
+    if(tab_11_1[i] == 0) {
+      tab_11_1.pop;
+      saisi_11_1 = false;
+    }
+
+    i++;
+  }
+
+  console.log(tab_11_1[i]);
+}
